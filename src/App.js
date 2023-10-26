@@ -32,7 +32,7 @@ useEffect(() => {
 }, [DBUpdated])
 
   return (
-    <ProjectContext.Provider value={{projects, setProjects}}>
+    <ProjectContext.Provider value={{projects, setProjects, setDBUpdated}}>
     <Router>
     <div className="App">
      <Routes>

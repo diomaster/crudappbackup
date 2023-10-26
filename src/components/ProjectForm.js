@@ -10,12 +10,13 @@ export default function ProjectForm() {
 
     let {pid} = useParams()
    
+    //pid = parseInt(pid)
 
     let project;
     if(pid){
         project = { ...projects.find(p => p._id === pid)}
     } else {
-        let maxId = ""
+        let maxId = 1
         if(projects.length > 0){
             maxId = projects[projects.length - 1].id + 1
         }
@@ -34,6 +35,7 @@ export default function ProjectForm() {
 
 
     const addUpdateProjForm = (e) => {
+        
         e.preventDefault();
       
         let url = ""
@@ -55,9 +57,9 @@ export default function ProjectForm() {
             .then((response) => {
                 return response.json();
             })
-            .then((_response) => {
-                setDBUpdated(true)
-                navigate('/list')
+            .then((response) => {
+                setDBUpdated(true);
+                navigate('/list');
             })
             .catch((err) => {
                 // Code called when an error occurs during the request
