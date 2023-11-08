@@ -16,7 +16,7 @@ export default function List(props) {
       .then((response) => {
         return response.json();
       })
-      .then((resp) => {
+      .then((response) => {
         setDBUpdated("true")
       })
       .catch((err) => {
@@ -24,6 +24,8 @@ export default function List(props) {
         console.log(err.message);
       });
   }
+
+ 
 
     return (
       <div>

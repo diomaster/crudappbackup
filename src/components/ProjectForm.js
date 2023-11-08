@@ -50,7 +50,7 @@ export default function ProjectForm() {
 
         fetch(url, {
             method: fetch_method,
-            headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+            headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
             body: JSON.stringify(project),
             credentials: "include"
         })
